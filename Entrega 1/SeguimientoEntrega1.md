@@ -127,3 +127,11 @@
 - [ ]  Validaciones de los setters
 
 > En general hay que verificar las validaciones porque no valide nada
+
+---
+***Clases no implementadas***
+- NovedadEvento
+- Siguiendo
+- Enofilo
+- Certificación
+- CobroPremium
