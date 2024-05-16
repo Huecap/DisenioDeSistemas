@@ -1,5 +1,8 @@
 # Entrega 1
 
+[Volver](../README.md)
+
+---
 Realización del caso de uso de análisis
 Se tomará como referencia para el modelado, únicamente las clases del Modelo de Dominio entregado por la Cátedra y la
 solución desarrollada en clase.
@@ -23,3 +26,11 @@ o El esquema de persistencia
 o Las notificaciones push
 o La exportación a un archivo .csv o Excel
 ---
+
+## Respuestas
+> Caso de uso 24
+- [Diagrama Secuencia Alternativa 1 parte 1](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20Parte%201.pdf)
+- [Diagrama Secuencia Alternativa 1 parte 2](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20Parte%202.pdf)
+- [Diagrama Secuencia Alternativa 2](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024.pdf)
+
+- [Aplicacion](./Codigo/Aplicacion.py)

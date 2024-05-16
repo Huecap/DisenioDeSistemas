@@ -1,13 +1,27 @@
 # Proyecto de Aplicación Integrador
 
+## Integrantes
 
+|Apellido | Nombre | Legajo |
+|---------|---------|--------|
+| Capdevvila| Huenu  | 94513 |
+| Alves |Rocio|   94215 |
+| Alvaretto | Caterina | 95028 |
+| Medrano|    Alvaro |     |
+| Gabrielli|  Pedro| |
+| Malnis | Soledad | |
+| Gutierrez | Victoria | |
+| B? | Tomas | |
+| Viana | Juan | |
+| Mate ? | | |
 
 ## Entregas
 
 ### [Entrega 1: Análisis del Sistema](./Entrega%201/Entrega1.md)
+
 - [Seguimiento del Proyecto](./Entrega%201/SeguimientoEntrega1.md)
 
-## Documentos 
+## Documentos
 
 - [Descripción de Dominio](./Documentos_BonVino/PPAI%20IVR_Descripción%20del%20dominio.pdf)
 - [Especificación de Requerimientos](./Documentos_BonVino/ERS%20Bonvino%20-%20PPAI.pdf)

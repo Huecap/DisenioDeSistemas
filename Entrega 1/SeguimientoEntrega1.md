@@ -1,5 +1,8 @@
 # Cosas que tenemos que tener en cuenta para la entrega 1
 
+[Volver](../README.md)
+
+---
 - Cree un entorno de trabajo para trabajar mejor para ejecutarlo
   - Windows = `.\env\bin\activate`
   - Linux = `source env/bin/activate `
