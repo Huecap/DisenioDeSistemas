@@ -100,6 +100,18 @@ class Vino():
         
     def contarResenias(self):
         return len(self._resenias)
+    
+    def calcularRanking(self):
+        pass
+    
+    def compararEtiqueta(self):
+        pass
+    
+    def esDeBodega(self):
+        pass
+    
+    def esDeRegionVitivinicola(self):
+        pass
 
 if __name__ == "__main__":
     
