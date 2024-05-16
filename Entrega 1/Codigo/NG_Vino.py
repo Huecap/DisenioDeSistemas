@@ -1,8 +1,8 @@
 
-
+from NG_Resenias import Resenia
 
 class Vino():
-    def __init__(self, aniada, imagen, nombre, notaCata, precioArs):
+    def __init__(self, aniada:str, imagen:bin, nombre:str, notaCata:float, precioArs:float):
         self._aniada = aniada
         self._imagen  = imagen 
         self._nombre  = nombre 

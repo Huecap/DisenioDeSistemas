@@ -29,8 +29,14 @@
 #### En la implementación 
 
 ***En todas las clases***
+- [ ] Creacion Clase Vino
+  - [ ] 
+- [ ] Creacion Clase Reseñas
+- [ ] Creacion Clase Usuario
+  - [ ]  No me acuerdo si este metodo cambia la propiedad esPremium o directamente retorna si es premium o no
+- [ ] Creacion Clase Somelier
+  - [ ] No me acuerdo si el metodo esPremium() solo devuelve si es de somelier o modifica el estado del atributo esPremium
+- [ ] Creacion Clase 
+
 - [ ]  Validaciones de los setters 
 
-
-*Usuario*
-- [ ]  No me acuerdo si este metodo cambia la propiedad esPremium o directamente retorna si es premium o no
