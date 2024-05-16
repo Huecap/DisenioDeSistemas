@@ -3,7 +3,7 @@ from datetime import date, datetime
 
 class Resenia:
     
-    def __init__(self, vino , comentario : str, puntaje : int, esPremium: bool, fecha : date) -> None:
+    def __init__(self, vino , comentario : str, puntaje : float, esPremium: bool, fecha : date) -> None:
         self._vino = vino
         self._comentario = comentario
         self._puntaje = puntaje
@@ -31,10 +31,10 @@ class Resenia:
         """Metodo mágico que representa al objeto como un string
         
         """
-        mensaje = f'Vino: {self._vino}\n'      
+        mensaje = f'Vino: {self._vino.nombre}\n'      
         mensaje += f'Comentario {self._comentario}\n'      
         mensaje += f'Puntaje: {self._puntaje}/5\n'      
-        mensaje += f'La resenia fue dejada por un {"Enofilo" if self.sosDeEnofilo else "Somelier"} \n'      
+        mensaje += f'La resenia fue dejada por un {"Enofilo" if self.sosDeEnofilo() else "Somelier"} \n'      
         mensaje += f'Fecha de la Reseña {self._fechaResenia}'      
         return mensaje
     

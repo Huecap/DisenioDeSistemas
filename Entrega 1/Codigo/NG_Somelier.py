@@ -1,4 +1,5 @@
 from NG_Usuarios import Usuario
+from NG_Vino import Vino
 
 class Somelier():
     
@@ -36,7 +37,7 @@ class Somelier():
     def conocerCertificaciones(self):
         return self._certificaciones 
     
-    def reseniar(self ,vino : Vino, resenia : tuple):
+    def reseniar(self ,vino:Vino, resenia : tuple):
         if self._validado:
             vino.reseniarPremium(resenia) # resenia (comentario, puntaje)
         else:
