@@ -17,9 +17,14 @@
 
 ## Entregas
 
+[Consignas PPAI 2024](./PPAI%202024_Consignas.pdf)
+
+---
+
 ### [Entrega 1: Análisis del Sistema](./Entrega%201/Entrega1.md)
 
-- [Seguimiento del Proyecto](./Entrega%201/SeguimientoEntrega1.md)
+- [Cosas a tener en cuenta](./Entrega%201/SeguimientoEntrega1.md)
+- [Lista de Tareas](./Entrega%201/Lista_tareas.md)
 
 ## Documentos
 
