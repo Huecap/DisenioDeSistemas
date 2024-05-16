@@ -43,9 +43,11 @@
 ```
 
 ---
+
 ## Dependencias
 
 - `random` = Generar valores aleatorios
 - `datetime` = Para manejar valores del tipo fecha
-- 
+-
+
 ---
