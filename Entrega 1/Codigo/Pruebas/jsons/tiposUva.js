@@ -1,0 +1,1 @@
+[{"nombre": "Malbec", "descripcion": "Uva tinta fuerte y robusta."}, {"nombre": "Cabernet Sauvignon", "descripcion": "Uva tinta con notas de frutas oscuras."}, {"nombre": "Merlot", "descripcion": "Uva tinta suave y afrutada."}, {"nombre": "Syrah", "descripcion": "Uva tinta con sabores a especias."}, {"nombre": "Pinot Noir", "descripcion": "Uva tinta ligera y elegante."}]
