@@ -20,7 +20,7 @@ class Vino():
         self._varietal = None 
         self._bodega = None
         
-        
+    
     # Getters 
     @property    
     def aniada(self):
@@ -56,7 +56,7 @@ class Vino():
     def precio(self, precio:float):
         self._precioArs  = precio 
     
-    
+
     def __str__(self) -> str:
         mensaje = f'\n--- Vino {self._nombre } --- \n'
         mensaje += f'- Añada = {self._aniada} \n'
@@ -65,7 +65,7 @@ class Vino():
         mensaje +=  f'- Cantidad de resenias = {len(self._resenias)} \n'
         return mensaje
     
-    
+
     def reseniarPremium(self, resenia:tuple):
         """Permite agregar una reseña de un somelier al vino
 
