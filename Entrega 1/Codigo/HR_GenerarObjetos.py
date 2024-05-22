@@ -10,14 +10,14 @@ from NG_Resenias import Resenia
 
 
 def generarObjetos():
-
+    #! ---- Cambios en datos tipo_uva y varietal para que coincidan orden y porcentaje
     # Datos de ejemplo para TipoUva
     tipos_uva_data = [
         {"nombre": "Malbec", "descripcion": "Uva tinta fuerte y robusta."},
         {"nombre": "Cabernet Sauvignon", "descripcion": "Uva tinta con notas de frutas oscuras."},
-        {"nombre": "Merlot", "descripcion": "Uva tinta suave y afrutada."},
+        {"nombre": "Pinot Noir", "descripcion": "Uva tinta ligera y elegante."}, 
         {"nombre": "Syrah", "descripcion": "Uva tinta con sabores a especias."},
-        {"nombre": "Pinot Noir", "descripcion": "Uva tinta ligera y elegante."},
+        {"nombre": "Merlot", "descripcion": "Uva tinta suave y afrutada."},
 
     ]
 
@@ -32,11 +32,11 @@ def generarObjetos():
 
     # Datos de ejemplo para Varietal con TipoUva
     varietal_data = [
-        {"descripcion": "Malbec", "porcentaje_composicion": [(tipos_uva[0],40)]},
-        {"descripcion": "Cabernet Sauvignon", "porcentaje_composicion": [(tipos_uva[1], 30)]},
-        {"descripcion": "Chardonnay", "porcentaje_composicion": [(tipos_uva[2],25)]},
-        {"descripcion": "Syrah", "porcentaje_composicion": [(tipos_uva[3],35)]},
-        {"descripcion": "Merlot", "porcentaje_composicion": [(tipos_uva[4],45)]},
+        {"descripcion": "Malbec", "porcentaje_composicion": [(tipos_uva[0],100)]},
+        {"descripcion": "Cabernet Sauvignon", "porcentaje_composicion": [(tipos_uva[1], 70)]},
+        {"descripcion": "Pinot Noir", "porcentaje_composicion": [(tipos_uva[2],70)]},
+        {"descripcion": "Syrah", "porcentaje_composicion": [(tipos_uva[3],30)]},
+        {"descripcion": "Merlot", "porcentaje_composicion": [(tipos_uva[4],30)]},
     ]
 
     # Crear instancias de Varietal
@@ -155,6 +155,7 @@ def generarObjetos():
         print(bodega._nombre)
     """
 
+    #! ----- Cambios en las listas de varietales para que porcentaje de 100 ------
     # Datos de ejemplo para Vino
     vino_data = [
         {
@@ -164,7 +165,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 4.5,
             "precio_ARS": 750.0,
             "maridaje": [maridajes[0], maridajes[1]],
-            "varietal": [varietales[0], varietales[1]],
+            "varietal": [varietales[4], varietales[1]],
             "bodega": bodegas[0],
         },
         {
@@ -174,7 +175,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 4.2,
             "precio_ARS": 550.0,
             "maridaje": [maridajes[1], maridajes[2]],
-            "varietal": [varietales[1], varietales[2]],
+            "varietal": [varietales[0]],
             "bodega": bodegas[1],
         },
         {
@@ -184,7 +185,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 5.0,
             "precio_ARS": 1200.5,
             "maridaje": [maridajes[2], maridajes[3]],
-            "varietal": [varietales[3], varietales[3]],
+            "varietal": [varietales[3], varietales[2]],
             "bodega": bodegas[3],
         }, 
         {
@@ -194,7 +195,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 3.0,
             "precio_ARS": 400.0,
             "maridaje": [maridajes[3], maridajes[4]],
-            "varietal": [varietales[4], varietales[4]],
+            "varietal": [varietales[4], varietales[1]],
             "bodega": bodegas[2],
         },
         {
@@ -204,7 +205,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 2.8,
             "precio_ARS": 900.0,
             "maridaje": [maridajes[4], maridajes[3]],
-            "varietal": [varietales[0], varietales[3]],
+            "varietal": [varietales[2], varietales[3]],
             "bodega": bodegas[3],
         },
         {
@@ -224,7 +225,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 5.0,
             "precio_ARS": 880.6,
             "maridaje": [maridajes[1], maridajes[4]],
-            "varietal": [varietales[0], varietales[2]],
+            "varietal": [varietales[0]],
             "bodega": bodegas[1],
         },
         {
@@ -254,7 +255,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 2.7,
             "precio_ARS": 980.8,
             "maridaje": [maridajes[2], maridajes[4]],
-            "varietal": [varietales[3], varietales[0]],
+            "varietal": [varietales[4], varietales[1]],
             "bodega": bodegas[1],
         },
         {
@@ -264,7 +265,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 3.0,
             "precio_ARS": 200.0,
             "maridaje": [maridajes[3], maridajes[2]],
-            "varietal": [varietales[3], varietales[3]],
+            "varietal": [varietales[3], varietales[2]],
             "bodega": bodegas[2],
         },
         {
@@ -294,7 +295,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 3.9,
             "precio_ARS": 750.5,
             "maridaje": [maridajes[3], maridajes[1]],
-            "varietal": [varietales[2], varietales[0]],
+            "varietal": [varietales[0]],
             "bodega": bodegas[2],
         },
         {
@@ -304,7 +305,7 @@ def generarObjetos():
             "nota_de_cata_bodega": 2.2,
             "precio_ARS": 600.6,
             "maridaje": [maridajes[2], maridajes[0]],
-            "varietal": [varietales[2], varietales[3]],
+            "varietal": [varietales[0]],
             "bodega": bodegas[1],
         }
     ]

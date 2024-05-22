@@ -32,8 +32,8 @@ o La exportación a un archivo .csv o Excel
 
 > Caso de uso 24
 
-- [Diagrama Secuencia Alternativa 1 parte 1](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20Parte%201.pdf)
-- [Diagrama Secuencia Alternativa 1 parte 2](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20Parte%202.pdf)
-- [Diagrama Secuencia Alternativa 2](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024.pdf)
+- [Diagrama Secuencia Final](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024%20final.pdf)
+
+- [Diagrama Secuencia V1](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024.pdf)
 
 - [Aplicacion](./Codigo/Aplicacion.py)

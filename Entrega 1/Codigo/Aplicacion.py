@@ -10,14 +10,11 @@ from NG_Gestor import Gestor
 
 
 class Apk:
-    
     def __init__(self) -> None:
         self.ventana = tk.Tk()
-        self.interfazGenerarRankingVino = InterfazGenerarRankingVino(self.ventana)
         self._gestor = Gestor()
-        self.interfazGenerarRankingVino.gestor = self._gestor
-        
-
+        #! Directamente ya pasamos gestor por parametro
+        self.interfazGenerarRankingVino = InterfazGenerarRankingVino(self.ventana, self._gestor)
 
     
 if __name__ == "__main__":
@@ -25,13 +22,13 @@ if __name__ == "__main__":
     aplicacion = Apk()
 
     # Geometria de la ventan 
-    aplicacion.ventana.geometry("420x520")
+    aplicacion.ventana.geometry("600x520")
     aplicacion.ventana.resizable(False, False)
 
 
     # Seteamos el tema
-    #aplicacion.ventana.tk.call("source", "azure.tcl")
-    #aplicacion.ventana.tk.call("set_theme", "dark")
+    aplicacion.ventana.tk.call("source", "azure.tcl")
+    aplicacion.ventana.tk.call("set_theme", "dark")
     
     # Actualizamos cualquier cambio de la aplicacion.ventana
     aplicacion.ventana.update()

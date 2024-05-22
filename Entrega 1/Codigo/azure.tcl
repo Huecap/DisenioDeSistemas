@@ -11,11 +11,12 @@ proc set_theme {mode} {
 
 		array set colors {
             -fg             "#ffffff"
-            -bg             "#333333"
+            -bg             "#4b1b1b"
             -disabledfg     "#ffffff"
             -disabledbg     "#737373"
             -selectfg       "#ffffff"
-            -selectbg       "#007fff"
+            -selectbg       "#000000"
+            -prueba         "#ffffff"
         }
         
         ttk::style configure . \
@@ -28,7 +29,7 @@ proc set_theme {mode} {
             -insertcolor $colors(-fg) \
             -insertwidth 1 \
             -fieldbackground $colors(-selectbg) \
-            -font {"Segoe Ui" 10} \
+            -font {"Segoe " 10} \
             -borderwidth 1 \
             -relief flat
 
@@ -49,12 +50,12 @@ proc set_theme {mode} {
 		ttk::style theme use "azure-light"
 
         array set colors {
-            -fg             "#000000"
-            -bg             "#ffffff"
-            -disabledfg     "#737373"
-            -disabledbg     "#ffffff"
+            -fg             "#ffffff"
+            -bg             "#4b1b1b"
+            -disabledfg     "#ffffff"
+            -disabledbg     "#737373"
             -selectfg       "#ffffff"
-            -selectbg       "#007fff"
+            -selectbg       "#000000"
         }
 
 		ttk::style configure . \
