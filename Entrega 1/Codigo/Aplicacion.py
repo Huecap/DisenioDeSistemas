@@ -30,8 +30,8 @@ if __name__ == "__main__":
 
 
     # Seteamos el tema
-    aplicacion.ventana.tk.call("source", "azure.tcl")
-    aplicacion.ventana.tk.call("set_theme", "dark")
+    #aplicacion.ventana.tk.call("source", "azure.tcl")
+    #aplicacion.ventana.tk.call("set_theme", "dark")
     
     # Actualizamos cualquier cambio de la aplicacion.ventana
     aplicacion.ventana.update()
