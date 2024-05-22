@@ -8,7 +8,8 @@ from datetime import datetime
 
 
 class InterfazGenerarRankingVino():
-    valores_tipos_archivos = ["Excel", "PDF"]
+    # ! ------ Atributos lo tiene que tener el gestor -------- 
+    valores_tipos_archivos = ["Excel", "PDF", 'Mostrar Por Pantalla']
     valores_tipos_resenias = ["Reseñas Somelier", "Reseñas Amigos", "Reseñas Normales"]
         
     def __init__(self, root) -> None:

@@ -8,6 +8,8 @@ class Gestor:
     def __init__(self) -> None:
         self._vinos = []
         self.cargar_vinos(generarObjetos())
+        self.valores_tipos_archivos = ["Excel", "PDF", 'Mostrar Por Pantalla']
+        self.valores_tipos_resenias = ["Reseñas Somelier", "Reseñas Amigos", "Reseñas Normales"]
     
     def cargar_vinos(self, vinos):
         for vino in vinos:
