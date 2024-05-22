@@ -46,6 +46,9 @@ class Provincia():
             cantidad += region.contarBodegas()
         return cantidad 
     
+    def obtenerPais(self):
+        return self._pais.nombre
+    
     def __str__(self) -> str:
         mensaje = f' --- Provincia de {self._nombre} --- \n'
         if len(self._regiones) > 0:
@@ -56,12 +59,12 @@ class Provincia():
             mensaje+= "\n No tiene regiones asociadas \n"
         return mensaje
         
-
 class RegionVitivinicola():
-    def __init__(self, provincia, nombre) -> None:
+    def __init__(self, nombre, descripcion, provincia) -> None:
         self._nombre = nombre
+        self._descripcion = descripcion #Cate: Esto lo agregue por los datos de prueba 
         self._provincia = provincia
-        self._bodegas = []
+        self._bodegas = [] 
         
     def cargarBodegas(self, bodegas:list):
         for bodega in bodegas:
@@ -69,6 +72,9 @@ class RegionVitivinicola():
             
     def contarBodegas(self):
         return len(self._bodegas)
+
+    def obtenerPais(self):
+        return self._provincia.obtenerPais()
     
     def __str__(self) -> str:
         mensaje = f'\n Region = {self._nombre} \n' #{self._nombre}'

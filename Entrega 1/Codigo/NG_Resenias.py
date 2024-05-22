@@ -3,14 +3,18 @@ from datetime import date, datetime
 
 class Resenia:
     
-    def __init__(self, vino , comentario : str, puntaje : float, esPremium: bool, fecha : date) -> None:
-        self._vino = vino
+    def __init__(self, comentario : str, puntaje : float, esPremium: bool, fechaResenia : date, vino:object) -> None:
         self._comentario = comentario
         self._puntaje = puntaje
         self._esPremium = esPremium
         # self._fechaResenia = datetime.datetime.now()
-        self._fechaResenia = fecha
+        self._fechaResenia = fechaResenia
+        self._vino = vino
         
+    @property
+    def puntaje(self):
+        return self._puntaje    
+    
     def sosDeEnofilo(self):
         """Devuelve True si es de Enofilo, Devuelve False si es de Somelier
 
@@ -25,7 +29,10 @@ class Resenia:
         :return: Devuelve un booleano
         :rtype: bool
         """
-        return (True if self._esPremium else False)    
+        if self._esPremium:
+            return True
+        else:
+            return False
     
     def __str__(self):
         """Metodo mágico que representa al objeto como un string
@@ -40,7 +47,18 @@ class Resenia:
     
     def esPremium(self):
         return (True if self._esPremium else False)
+    
+    def sosDePeriodo(self, periodo):
+        if self._fechaResenia > periodo[0] and self._fechaResenia < [1]:
+            return True
+        else:
+            return False
         
+    def sosDeTipo(self, tipo):
+        if tipo == "Reseñas Somelier":
+            return self.sosDeSomelier()
+        else: 
+            return False
         
     
 if __name__ == "__main__":

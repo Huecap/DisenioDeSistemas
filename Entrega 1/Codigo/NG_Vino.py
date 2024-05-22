@@ -1,24 +1,23 @@
 import random
 from datetime import date, datetime
 from NG_Resenias import Resenia
-# from NG_Maridaje import Maridaje
-# from NG_Varietal import Varietal
+from NG_Maridaje import Maridaje
+from NG_Varietal import Varietal
 # from NG_Bodega import Bodega
 
 
 
 class Vino():
-    def __init__(self, aniada:str, imagen:bin, nombre:str, notaCata:float, precioArs:float):
+    def __init__(self, aniada:str, imagen_etiqueta:bin, nombre:str, nota_de_cata_bodega:float, precio_ARS:float, maridaje:Maridaje, varietal:Varietal, bodega:object):
         self._aniada = aniada
-        self._imagen  = imagen 
+        self._imagen = imagen_etiqueta #Cambie el nombre
         self._nombre  = nombre 
-        self._notaCata  = notaCata
-        self._precioArs  = precioArs
+        self._notaCata  = nota_de_cata_bodega
+        self._precioArs  = precio_ARS
         self._resenias = []
-        # ! Falta de Implementar
-        self._maridaje = None 
-        self._varietal = None 
-        self._bodega = None
+        self._maridaje = maridaje 
+        self._varietal = varietal 
+        self._bodega = bodega
         
     
     # Getters 
@@ -97,7 +96,47 @@ class Vino():
             return mensaje
         else: 
             mensaje = "No hay reseñas que mostrar"
+    
+    def tenesReseniasDeTipoEnPeriodo(self, periodo, tipo):
+        for resenia in self._resenias:
+            if resenia.sosDePeriodo(periodo) and resenia.sosDeTipo(tipo):
+                return True
+            else:
+                return False
+                
+    def obtenerDatosBodega(self):
+        nombre = self._bodega.nombre
+        regionYPais = self._bodega.obtenerRegionYPais()
+        return (nombre, regionYPais)
+    
+    def obtenerVarietal(self):
+        descripciones = []
+        for descripcion in self._varietal:
+            descripciones.append(descripcion)
+        return descripciones
+    
+    def calcularPuntajePromedio(self, puntajes):
+        longitud = puntajes.len()
+        total = 0
+        if longitud > 0:
+            for puntaje in puntajes:
+                total += puntaje
+            return total/longitud
+        else:
+            return 0
+    
+    def calcularPuntajeDeSomeleierEnPeriodo(self, periodo):
+        puntajes = []
+        for resenia in self._resenias:
+            if resenia.sosDePeriodo(periodo) and resenia.sosDeSomelier():
+                puntajes.append(resenia.puntaje)
+            else:
+                continue
+        promedio = self.calcularPuntajePromedio(puntajes)
         
+        return promedio
+    
+    
     def contarResenias(self):
         return len(self._resenias)
     
@@ -112,6 +151,11 @@ class Vino():
     
     def esDeRegionVitivinicola(self):
         pass
+
+    #! ------- Agregar funcion para Cargar Resenias (cuando las reseñas ya se instanciaron indicando premium o no)
+    def cargar_resenia(self, resenia:Resenia):
+        self._resenias.append(resenia)
+
 
 if __name__ == "__main__":
     

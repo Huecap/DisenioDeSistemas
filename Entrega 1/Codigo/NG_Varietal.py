@@ -2,7 +2,7 @@ from NG_TipoUva import TipoUva
 
 class Varietal:
     
-    def __init__(self, descripcion:str, porcentaje:list) -> None:
+    def __init__(self, descripcion:str, porcentaje_composicion:list) -> None:
         """Metodo creador de Varietal
 
         :param descripcion: Descripcion del varietal
@@ -11,7 +11,7 @@ class Varietal:
         :type porcentaje: list[tuple(TipoUva, int)]
         """
         self._descripcion = descripcion
-        self._porcentajeComposicion = porcentaje
+        self._porcentaje_composicion = porcentaje_composicion
         
     def conocerTipoUva(self):
         tipos_uva = []

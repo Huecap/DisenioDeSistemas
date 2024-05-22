@@ -4,13 +4,13 @@ from NG_Geografia import RegionVitivinicola
 from NG_Vino import Vino
 
 class Bodega:
-    def __init__(self, nombre:str, descripcion:str, historia:str, region:RegionVitivinicola, coordenadasUbicacion:str, periodoActualizacion:date) -> None:
-        self._nombre = nombre
+    def __init__(self, coordenadas_ubicacion:str, descripcion:str, historia:str, nombre:str, periodo_actualizacion:date, region:RegionVitivinicola,) -> None:
+        self._coordenadas = coordenadas_ubicacion #Cambie el nombre
         self._descripcion = descripcion
         self._historia = historia
+        self._nombre = nombre
+        self._periodoActualizacion = periodo_actualizacion #Cambie el nombre
         self._region = region
-        self._coordenadas = coordenadasUbicacion
-        self._periodoActualizacion = periodoActualizacion
         self._vinos = []
         
     def cargar_vino(self, vino:Vino):
@@ -46,6 +46,11 @@ class Bodega:
         for vino in self._vinos:
             cantidad += vino.contarResenias()
         return cantidad
+    
+    def obtenerRegionYPais(self):
+        region = self._region.nombre
+        pais = self._region.obtenerPais()
+        return (region, pais)
         
     def __str__(self):
         mensaje = f'--- Bodega {self._nombre} --- \n'
