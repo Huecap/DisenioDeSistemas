@@ -54,16 +54,15 @@ class InterfazGenerarRankingVino():
             messagebox.showwarning("Warning", 'Opciones actualmente no disponibles')
         else:
                 #print('HolaMundo')
+                #self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo,archivo)
+                #messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
+            try:
+                #print('HolaMundo')
                 self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo,archivo)
                 messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
-                
-            #try:
-            #    #print('HolaMundo')
-            #    self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo,archivo)
-            #    messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
-            #except Exception:
-            #    #print(Exception)
-            #    messagebox.showerror("Error", 'No se pudo generar el archivo')"""
+            except Exception:
+                #print(Exception)
+                messagebox.showerror("Error", 'No se pudo generar el archivo')
                 
     def validarFechas(self):
         fecha_desde = self.obtenerFechaDesde()
@@ -178,8 +177,8 @@ class InterfazGenerarRankingVino():
         self.boton_cancelar.pack(pady=10)
                 
         
-        #self.menu_inicio_frame.pack()
-        self.menu_generar_ranking.pack()
+        self.menu_inicio_frame.pack()
+        #self.menu_generar_ranking.pack()
 
 if __name__ == "__main__":
 
