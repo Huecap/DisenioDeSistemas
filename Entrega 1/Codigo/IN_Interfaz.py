@@ -10,7 +10,7 @@ from datetime import datetime
 class InterfazGenerarRankingVino():
     # ! ------ Atributos lo tiene que tener el gestor -------- 
     valores_tipos_archivos = ["Excel", "PDF", 'Mostrar Por Pantalla']
-    valores_tipos_resenias = ["Reseñas Somelier", "Reseñas Amigos", "Reseñas Normales"]
+    valores_tipos_resenias = ["Reseñas Sommelier", "Reseñas Amigos", "Reseñas Normales"]
         
     def __init__(self, root) -> None:
         self.root = root
@@ -59,8 +59,8 @@ class InterfazGenerarRankingVino():
                 #messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
             try:
                 #print('HolaMundo')
-                self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo,archivo)
-                messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
+                self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo, archivo)
+                messagebox.showinfo("Archivo Generado correctamente", 'Archivo \n"RankingVinos.xlsx" \n Generado correctamente')
             except Exception:
                 #print(Exception)
                 messagebox.showerror("Error", 'No se pudo generar el archivo')

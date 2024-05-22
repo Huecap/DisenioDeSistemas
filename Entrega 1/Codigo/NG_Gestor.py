@@ -8,8 +8,8 @@ class Gestor:
     def __init__(self) -> None:
         self._vinos = []
         self.cargar_vinos(generarObjetos())
-        self.valores_tipos_archivos = ["Excel", "PDF", 'Mostrar Por Pantalla']
-        self.valores_tipos_resenias = ["Reseñas Somelier", "Reseñas Amigos", "Reseñas Normales"]
+        #self.valores_tipos_archivos = ["Excel", "PDF", 'Mostrar Por Pantalla']
+        #self.valores_tipos_resenias = ["Reseñas Sommelier", "Reseñas Amigos", "Reseñas Normales"]
     
     def cargar_vinos(self, vinos):
         for vino in vinos:
@@ -19,9 +19,10 @@ class Gestor:
         #(fecha_d,fecha_h),tipo,archivo
         #print(periodo, tipo, archivo)
         
+        # ! Cambiar el orden para que coida bien con el diagrama de secuencia --- :D
         vinos = self.buscarVinosConReseniasEnPeriodo(periodo, tipo)
         puntajes = self.calcularPuntajeDeSomelierEnPeriodo(vinos, periodo)
-        puntajes_ordenados = self.ordenarVinos(puntajes)
+        puntajes_ordenados = self.ordenarVinosPuntajeMayor(puntajes)
         datos_vinos = self.formatoDatos(puntajes_ordenados[:10])
         #print(puntajes_ordenados)
         if archivo == "Excel":
@@ -49,8 +50,8 @@ class Gestor:
             datos_bodega = vino.datos
             vinos_datos{vino:[resenias_vino, vino.nombre, vino.precio]}
             """
-    
-    def ordenarVinos(self, lista):
+    # ! ordenarVinosPuntajeMayorPuntajeMayor
+    def ordenarVinosPuntajeMayor(self, lista):
         for a in range(len(lista)):
             for b in range(len(lista)):
                 if lista[a][1] > lista[b][1]:
