@@ -15,19 +15,19 @@ class Varietal:
         
     def conocerTipoUva(self):
         tipos_uva = []
-        for uva in self._porcentajeComposicion:
+        for uva in self._porcentaje_composicion:
             tipos_uva.append(uva[0].nombre)
         return tipos_uva
     
     def esDeTipoUva(self, tipo):
-        for uva in self._porcentajeComposicion:
+        for uva in self._porcentaje_composicion:
             if uva[0] == tipo:
                 return True
         return False
     
-    def mostrarPorcentaje(self):
-        mensaje = '-- Porcentaje de Composicion --\n'
-        for uva in self._porcentajeComposicion:
+    def obtenerPorcentaje(self):
+        mensaje = ''
+        for uva in self._porcentaje_composicion:
             mensaje += f'- Uva: {uva[0].nombre} {uva[1]}% \n'
         return mensaje
     

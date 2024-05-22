@@ -25,6 +25,10 @@ class Vino():
     def aniada(self):
         return self.__aniada
     
+    @property    
+    def varietal(self):
+        return self._varietal
+    
     @property 
     def imagen(self):
         return self._imagen 
@@ -102,7 +106,8 @@ class Vino():
             if resenia.sosDePeriodo(periodo) and resenia.sosDeTipo(tipo):
                 return True
             else:
-                return False
+                continue
+        return False
                 
     def obtenerDatosBodega(self):
         nombre = self._bodega.nombre
@@ -116,7 +121,7 @@ class Vino():
         return descripciones
     
     def calcularPuntajePromedio(self, puntajes):
-        longitud = puntajes.len()
+        longitud = len(puntajes)
         total = 0
         if longitud > 0:
             for puntaje in puntajes:
@@ -160,7 +165,7 @@ class Vino():
 if __name__ == "__main__":
     
     vino1 = Vino("100 % Lucha", "Imagen.jpg", "Toro", 10, 200.67 )
-    print(vino1)
+    #print(vino1)
     
     # Cargar resenias 
     for n in range(10):
@@ -169,5 +174,5 @@ if __name__ == "__main__":
         else:
             vino1.reseniarUsuario(("Muy Bueno", random.randrange(0,5)+round(random.random(), 2)))
             
-    print(vino1)
-    print(vino1.mostrarResenias())
+    #print(vino1)
+    #print(vino1.mostrarResenias())

@@ -11,6 +11,7 @@ from NG_Resenias import Resenia
 import json 
 #-------------------------------------------------------------
 
+
 # Datos de ejemplo para TipoUva
 tipos_uva_data = [
     {"nombre": "Malbec", "descripcion": "Uva tinta fuerte y robusta."},
@@ -775,6 +776,7 @@ for resenia in resenias:
 for resenia in resenias:
     resenia._vino.cargar_resenia(resenia)
     
+        
 
 for vino in vinos:              # muestra la coleccion de objetoetos Resenia asociados a cada vino
     print(vino)

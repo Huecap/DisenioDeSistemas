@@ -5,7 +5,11 @@ class Pais:
     def __init__(self, nombre) -> None:
         self._nombre = nombre
         self._provincias = []
-        
+    
+    @property
+    def nombre(self):
+        return self._nombre        
+    
     @property
     def provincias(self):
         return self._provincias
@@ -65,6 +69,10 @@ class RegionVitivinicola():
         self._descripcion = descripcion #Cate: Esto lo agregue por los datos de prueba 
         self._provincia = provincia
         self._bodegas = [] 
+        
+    @property
+    def nombre(self):
+        return self._nombre    
         
     def cargarBodegas(self, bodegas:list):
         for bodega in bodegas:
@@ -164,6 +172,6 @@ if __name__ == "__main__":
             cantidad += len(bodegas_creativas[a:b])
             
             
-        print(provincia)
+        #print(provincia)
         
-    print(argentina.contarBodegas())
+    #print(argentina.contarBodegas())

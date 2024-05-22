@@ -14,8 +14,8 @@ class Apk:
     def __init__(self) -> None:
         self.ventana = tk.Tk()
         self.interfazGenerarRankingVino = InterfazGenerarRankingVino(self.ventana)
-        self.gestor = Gestor()
-        self.interfazGenerarRankingVino.gestor = self.gestor
+        self._gestor = Gestor()
+        self.interfazGenerarRankingVino.gestor = self._gestor
         
 
 

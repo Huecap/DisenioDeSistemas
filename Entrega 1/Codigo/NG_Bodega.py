@@ -20,7 +20,11 @@ class Bodega:
         :type vino: Vino
         """
         self._vinos.append(vino)
-        
+    
+    @property
+    def nombre(self):
+        return self._nombre    
+    
     def mostrarTodosVinos(self):
         """Retorna una cadena con todos los nombres de los vinos
 

@@ -49,7 +49,8 @@ class Resenia:
         return (True if self._esPremium else False)
     
     def sosDePeriodo(self, periodo):
-        if self._fechaResenia > periodo[0] and self._fechaResenia < [1]:
+        
+        if self._fechaResenia >= periodo[0] and self._fechaResenia <= periodo[1]:
             return True
         else:
             return False
@@ -64,4 +65,4 @@ class Resenia:
 if __name__ == "__main__":
     resenia1 = Resenia("Toro", "Muy bueno y barato \n Pega bien con pritty",
                        5, True, datetime.now())
-    print(resenia1)
+    #print(resenia1)

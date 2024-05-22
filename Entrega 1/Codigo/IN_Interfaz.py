@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox, font
 from tkcalendar import DateEntry
 from screeninfo import get_monitors
+from datetime import datetime
 
 
 
@@ -52,11 +53,17 @@ class InterfazGenerarRankingVino():
         if tipo != self.valores_tipos_resenias[0] or archivo != self.valores_tipos_archivos[0]:
             messagebox.showwarning("Warning", 'Opciones actualmente no disponibles')
         else:
-            try:
-                self._gestor.generarRanking((fecha_d,fecha_h),tipo,archivo)
+                #print('HolaMundo')
+                self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo,archivo)
                 messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
-            except Exception:
-                messagebox.showerror("Error", 'No se pudo generar el archivo')
+                
+            #try:
+            #    #print('HolaMundo')
+            #    self._gestor.generarRankingVinos((fecha_d,fecha_h),tipo,archivo)
+            #    messagebox.showinfo("Archivo Generado correctamente", 'Archivo Generado correctamente')
+            #except Exception:
+            #    #print(Exception)
+            #    messagebox.showerror("Error", 'No se pudo generar el archivo')"""
                 
     def validarFechas(self):
         fecha_desde = self.obtenerFechaDesde()
@@ -122,17 +129,19 @@ class InterfazGenerarRankingVino():
         self.fecha_desde_label = ttk.Label(self.frame_fd, text="Fecha Desde", font=self.fuenta_letras)
         self.fecha_desde_label.pack(anchor="w", expand=True)
 
-        self.date_entry_desde = DateEntry(self.frame_fd, width=20)
+        default_date_desde = datetime(2024, 2, 25)
+        self.date_entry_desde = DateEntry(self.frame_fd, width=20, year=default_date_desde.year, month=default_date_desde.month, day=default_date_desde.day)
         self.date_entry_desde.pack(expand=True,fill="both")
 
         # Fecha Hasta
+        default_date_hasta = datetime(2024, 5, 25)
         self.frame_fh = tk.Frame(self.menu_generar_ranking)
         self.frame_fh.pack(pady=10, expand=True, fill="both")
      
         self.fecha_hasta_label = ttk.Label(self.frame_fh, text="Fecha Hasta", font=self.fuenta_letras)
         self.fecha_hasta_label.pack(anchor="w", expand=True)
      
-        self.date_entry_hasta = DateEntry(self.frame_fh, width=20)
+        self.date_entry_hasta = DateEntry(self.frame_fh, width=20, year=default_date_hasta.year, month=default_date_hasta.month, day=default_date_hasta.day)
         self.date_entry_hasta.pack(expand=True,fill="both")
 
 
