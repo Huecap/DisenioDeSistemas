@@ -3,8 +3,8 @@
 [Volver](../README.md)
 
 ---
-- [Cosas a tener en cuenta](./Entrega%201/SeguimientoEntrega1.md)
-- [Lista de Tareas](./Entrega%201/Lista_tareas.md)
+- [Cosas a tener en cuenta](./SeguimientoEntrega1.md)
+- [Lista de Tareas](./Lista_tareas.md)
 
 ---
 ## Consignas
