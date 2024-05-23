@@ -26,32 +26,21 @@ class InterfazGenerarRankingVino():
         # Mostrar el menú de inicio
         self.menu_inicio_frame.pack()
 
-    def mostrarGenerarRankingVinos(self):
+    def opcionRankingVinos(self):
         # Ocultar el menú de inicio
         self.menu_inicio_frame.pack_forget()
         # Mostrar el menú principal
         self.menu_generar_ranking.pack()
     
-    def enviar(self):
-        if not self.validarFechas():
-            messagebox.showerror("ERROR",'Error la La fecha desde debe ser menor a fecha hasta')
-            return
-
-        confirmacion = messagebox.askyesno("Confirmacioń", "Esta seguro que quiere confirmar")
-        if confirmacion:
-            self.generarRanking()
-        else:
-            messagebox.showwarning("Cancelado",'Se ha cancelado la operación')
-            
     
     def cancelar(self):
         self.mostrarMenuPrincipal()
     
     def generarRanking(self):
-        fecha_d = self.obtenerFechaDesde()
-        fecha_h = self.obtenerFechaHasta()
-        tipo = self.obtenerTipoResenia()
-        archivo = self.obtenerFormatoReporte()
+        fecha_d = self.tomarFechaDesde()
+        fecha_h = self.tomarFechaHasta()
+        tipo = self.tomarTipoResenia()
+        archivo = self.tomarTipoVisualizacion()
         
         
         if tipo != self._gestor.valores_tipos_resenias[0] or archivo != self._gestor.valores_tipos_archivos[0]:
@@ -68,23 +57,33 @@ class InterfazGenerarRankingVino():
                 #print(Exception)
                 messagebox.showerror("Error", 'No se pudo generar el archivo')
                 
-    def validarFechas(self):
-        fecha_desde = self.obtenerFechaDesde()
-        fecha_hasta = self.obtenerFechaHasta()
+    def validarPeriodo(self):
+        fecha_desde = self.tomarFechaDesde()
+        fecha_hasta = self.tomarFechaHasta()
         if fecha_desde > fecha_hasta:
             return False
         return True 
     
-    def obtenerFechaDesde(self):
+    def tomarConfirmacionGenReporte(self):
+        if not self.validarPeriodo():
+            messagebox.showerror("ERROR",'Error la La fecha desde debe ser menor a fecha hasta')
+            return
+
+        confirmacion = messagebox.askyesno("Confirmacioń", "Esta seguro que quiere confirmar")
+        if confirmacion:
+            self.generarRanking()
+        else:
+            messagebox.showwarning("Cancelado",'Se ha cancelado la operación')
+    def tomarFechaDesde(self):
         return self.date_entry_desde.get_date()
     
-    def obtenerFechaHasta(self):
+    def tomarFechaHasta(self):
         return self.date_entry_hasta.get_date()
     
-    def obtenerTipoResenia(self):
+    def tomarTipoResenia(self):
         return self.combo_tipo_resenia.get()
     
-    def obtenerFormatoReporte(self):
+    def tomarTipoVisualizacion(self):
         return self.combo_formato_reporte.get()
         
     @property
@@ -114,7 +113,7 @@ class InterfazGenerarRankingVino():
         self.label_image.pack(anchor="center", expand=True, pady=10, padx=10)
 
 
-        boton_menu_principal = ttk.Button(self.menu_inicio_frame, text="Generar Ranking de Vinos", command=self.mostrarGenerarRankingVinos)
+        boton_menu_principal = ttk.Button(self.menu_inicio_frame, text="Generar Ranking de Vinos", command=self.opcionRankingVinos)
         boton_menu_principal.pack(pady=10)
         
         #### --------------- Generar Ranking de vinos ---------------####
@@ -180,9 +179,9 @@ class InterfazGenerarRankingVino():
         self.frame_botones = tk.Frame(self.menu_generar_ranking)
         self.frame_botones.pack(pady=10, expand=True, fill="both")
      
-        self.boton_enviar = ttk.Button(self.frame_botones, text="Generar Reporte", command=self.enviar)
+        self.boton_tomarConfirmacionGenReporte = ttk.Button(self.frame_botones, text="Generar Reporte", command=self.tomarConfirmacionGenReporte)
         self.boton_cancelar = ttk.Button(self.frame_botones, text="Cancelar", command=self.cancelar)
-        self.boton_enviar.pack(pady=10)
+        self.boton_tomarConfirmacionGenReporte.pack(pady=10)
         self.boton_cancelar.pack(pady=10)
                 
         

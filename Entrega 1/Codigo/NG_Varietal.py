@@ -25,10 +25,10 @@ class Varietal:
                 return True
         return False
     
-    def obtenerPorcentaje(self):
+    def mostrarPorcentaje(self):
         mensaje = ''
-        for uva in self._porcentaje_composicion:
-            mensaje += f'- Uva: {uva[0].nombre} {uva[1]}% \n'
+        uva = self._porcentaje_composicion[0]
+        mensaje += f'- Uva: {uva[0].nombre} {uva[1]}% \n'
         return mensaje
     
 if __name__ == "__main__":

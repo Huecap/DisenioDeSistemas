@@ -17,14 +17,10 @@ class Gestor:
             self._vinos.append(vino)
     
     def generarRankingVinos(self, periodo, tipo, archivo):
-        #(fecha_d,fecha_h),tipo,archivo
-        #print(periodo, tipo, archivo)
-        
         vinos = self.buscarVinosConReseniasEnPeriodo(periodo, tipo)
         puntajes = self.calcularPuntajeDeSomelierEnPeriodo(vinos, periodo)
-        puntajes_ordenados = self.ordenarVinos(puntajes)
-        datos_vinos = self.formatoDatos(puntajes_ordenados[:10])
-        #print(puntajes_ordenados)
+        puntajes_ordenados = self.ordenarVinoPuntajeMayor(puntajes)
+        datos_vinos = self.obtenerDatosVinoParaRanking(puntajes_ordenados[:10])
         if archivo == "Excel":
             self.exportarExcel(datos_vinos)
             
@@ -45,13 +41,9 @@ class Gestor:
             puntaje = vino.calcularPuntajeDeSomeleierEnPeriodo(periodo)
             vinos_puntaje.append([vino,puntaje])
         return vinos_puntaje
-        pass
-    """     resenias_vino.append(vino.obtenerReseniasDeTipoEnPeriodo(periodo, tipo))
-            datos_bodega = vino.datos
-            vinos_datos{vino:[resenias_vino, vino.nombre, vino.precio]}
-            """
+
     
-    def ordenarVinos(self, lista):
+    def ordenarVinoPuntajeMayor(self, lista):
         for a in range(len(lista)):
             for b in range(len(lista)):
                 if lista[a][1] > lista[b][1]:
@@ -61,7 +53,7 @@ class Gestor:
                     lista[b] = mayor
         return lista
     
-    def formatoDatos(self, vinos):
+    def obtenerDatosVinoParaRanking(self, vinos):
         formatos = []
         for vino, promedio in vinos:
             nombre = vino.nombre
@@ -70,13 +62,20 @@ class Gestor:
             precio = vino.precio
             datosBodega = vino.obtenerDatosBodega()
             bodega = datosBodega[0]
-            varietales = ''
+            varietales = self.obtenerPorcentajeVarietales(vino)
+            """varietales = ''
             for varietal in vino.varietal:
-                varietales += varietal.obtenerPorcentaje()
+                varietales += varietal.mostrarPorcentaje()"""
             region = datosBodega[1][0]
             pais = datosBodega[1][1]
             formatos.append([nombre, calificacionSom, calificacionGen, precio, bodega, varietales, region, pais])
         return formatos
+    
+    def obtenerPorcentajeVarietales(self, vino):
+        varietales = ''
+        for varietal in vino.varietal:
+            varietales += varietal.mostrarPorcentaje()
+        return varietales
     
     def exportarExcel(self, lista):
         # Crear un nuevo libro de trabajo y seleccionar la hoja activa
