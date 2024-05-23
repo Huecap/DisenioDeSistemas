@@ -33,6 +33,10 @@ o La exportación a un archivo .csv o Excel
 
 ---
 
+*Ver Consignas Completas* : [Consignas PPAI 2024](./PPAI%202024_Consignas.pdf)
+
+---
+
 ## Respuestas
 
 ### Caso de uso 24
@@ -52,7 +56,7 @@ o La exportación a un archivo .csv o Excel
 ## Previsualización de la aplicación
 
 ### Inicio
-![alt text](AplicacionFoto1.png)
+![alt text](assets/AplicacionFoto1.png)
 
 ### Opcion Generar Ranking Vinos
-![alt text](AplicacionFoto2.png)
+![alt text](assets/AplicacionFoto2.png)
