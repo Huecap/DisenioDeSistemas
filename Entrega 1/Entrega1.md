@@ -3,6 +3,11 @@
 [Volver](../README.md)
 
 ---
+- [Cosas a tener en cuenta](./Entrega%201/SeguimientoEntrega1.md)
+- [Lista de Tareas](./Entrega%201/Lista_tareas.md)
+
+---
+## Consignas
 Realización del caso de uso de análisis
 Se tomará como referencia para el modelado, únicamente las clases del Modelo de Dominio entregado por la Cátedra y la
 solución desarrollada en clase.
@@ -10,7 +15,7 @@ solución desarrollada en clase.
 1. Vista de clases de análisis
 Construido con un diagrama de clases.
 La vista debe incluir las clases de análisis necesarias para el modelado del escenario del caso de uso asignado.
-2. Vista de interacción
+1. Vista de interacción
 Modelar el escenario descripto en el caso de uso, utilizando un diagrama de secuencia. Considerar la aplicación de
 los patrones GRASP de análisis.
 Implementación de la realización del caso de uso de análisis
@@ -30,12 +35,24 @@ o La exportación a un archivo .csv o Excel
 
 ## Respuestas
 
-> Caso de uso 24
+### Caso de uso 24
 
-- [Diagrama Secuencia Final](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024%20final.pdf)
-
-- [Diagrama Secuencia V1](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024.pdf)
-- [Diagrama Secuencia Alternativa 2 P1](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20Parte%202.pdf)
-- [Diagrama Secuencia Alternativa 2 P2](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20Parte%201.pdf)
-
+- [Diagrama de Secuencia](./Diagramas/Diagrama%20de%20secuencias%20Generar%20Ranking%20Final.pdf)
+- [Diagrama de clases](./Diagramas/Diagrama%20De%20Clases%20Generar%20Ranking.pdf)
 - [Aplicacion](./Codigo/Aplicacion.py)
+
+#### Versiones anteriores
+
+- [Diagrama de secuencia V1](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024%20V1.pdf)
+- [Diagrama de secuencia V2 Parte 1](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20V2%20Parte%201.pdf)
+- [Diagrama de secuencia V2 Parte 2](./Diagramas/Diagrama%20de%20Secuencia%20PPI%20-%20V2%20Parte%202.pdf)
+- [Diagrama de secuencia V3 ](./Diagramas/Diagrama%20de%20Secuencia%20CU%2024%20V3.pdf)
+
+---
+## Previsualización de la aplicación
+
+### Inicio
+![alt text](AplicacionFoto1.png)
+
+### Opcion Generar Ranking Vinos
+![alt text](AplicacionFoto2.png)

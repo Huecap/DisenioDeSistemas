@@ -48,6 +48,9 @@
 
 - `random` = Generar valores aleatorios
 - `datetime` = Para manejar valores del tipo fecha
--
+- `screeninfo` = Para poder obtener los valores de la pantalla del usuario
+- `tkcalendar` = Manipular calendarios con tkinter
+- `openpyxl` = Manipual excel
+- `tkinter` = Crear interfaces de usuario
 
 ---
