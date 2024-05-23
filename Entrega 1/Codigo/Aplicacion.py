@@ -5,7 +5,7 @@ from tkcalendar import DateEntry
 from screeninfo import get_monitors
 
 
-from IN_Interfaz import InterfazGenerarRankingVino
+from IN_Interfaz import PantallaRankingVinos
 from NG_Gestor import Gestor
 
 
@@ -14,7 +14,7 @@ class Apk:
         self.ventana = tk.Tk()
         self._gestor = Gestor()
         #! Directamente ya pasamos gestor por parametro
-        self.interfazGenerarRankingVino = InterfazGenerarRankingVino(self.ventana, self._gestor)
+        self.PantallaRankingVinos = PantallaRankingVinos(self.ventana, self._gestor)
 
     
 if __name__ == "__main__":

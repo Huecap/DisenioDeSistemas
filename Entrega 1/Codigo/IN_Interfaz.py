@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 
-class InterfazGenerarRankingVino():
+class PantallaRankingVinos():
     # ! ------ Atributos lo tiene que tener el gestor -------- ##SOLUCIONADO
     #valores_tipos_archivos = ["Excel", "PDF", 'Mostrar Por Pantalla']
     #valores_tipos_resenias = ["Reseñas Somelier", "Reseñas Amigos", "Reseñas Normales"]
@@ -194,7 +194,7 @@ class InterfazGenerarRankingVino():
 if __name__ == "__main__":
 
     ventana = tk.Tk()
-    boundary = InterfazGenerarRankingVino(ventana)
+    boundary = PantallaRankingVinos(ventana)
 
     # Geometria de la ventan 
     ventana.geometry("420x520")

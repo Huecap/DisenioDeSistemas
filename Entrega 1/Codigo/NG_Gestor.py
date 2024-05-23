@@ -91,6 +91,6 @@ class Gestor:
     
 
 if __name__ == '__main__':
-    gestor = GestorGenerarRankingVino()
+    gestor = Gestor()
     # (fecha_d,fecha_h),tipo,archivo
     fecha_d = 1
