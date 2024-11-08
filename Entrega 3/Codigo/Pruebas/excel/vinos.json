@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Vino A",
+        "calificacion_somelier": 95,
+        "calificacion_general": 90,
+        "precio_sugerido": 20.5,
+        "nombre_bodega": "Bodega A",
+        "varietal": "Malbec",
+        "region": "Mendoza",
+        "pais": "Argentina"
+    },
+    {
+        "nombre": "Vino B",
+        "calificacion_somelier": 88,
+        "calificacion_general": 85,
+        "precio_sugerido": 15.0,
+        "nombre_bodega": "Bodega B",
+        "varietal": "Cabernet Sauvignon",
+        "region": "Valle Central",
+        "pais": "Chile"
+    }
+]
